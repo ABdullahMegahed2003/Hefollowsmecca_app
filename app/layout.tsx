@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Cairo } from "next/font/google";
+
+
+const cairo = Cairo({
+  subsets: ["arabic"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,9 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
+
       <body
-        className={` antialiased`}
-        
+        className={` ${cairo.className} antialiased`}
+
       >
         {children}
       </body>

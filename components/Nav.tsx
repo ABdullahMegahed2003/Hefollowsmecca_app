@@ -17,7 +17,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Nav(): JSX.Element {
+export default function Nav() {
   return (
     <Disclosure as="nav" className="bg-white shadow-md sticky top-0 z-50">
       {({ open }) => (
